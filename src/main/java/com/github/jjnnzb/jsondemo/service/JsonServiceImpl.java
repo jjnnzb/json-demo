@@ -29,9 +29,9 @@ public class JsonServiceImpl implements JsonService {
     public TimeBeanList generateTimeBeanList() {
         TimeBean timeBean = new TimeBean();
         timeBean.setDate(LocalDate.now());
-        timeBean.setLocalTime(LocalTime.now());
+        timeBean.setTime(LocalTime.now());
         TimeBean anotherBean = new TimeBean();
-        anotherBean.setLocalTime(LocalTime.now());
+        anotherBean.setTime(LocalTime.now());
         anotherBean.setDate(LocalDate.now().minusDays(1));
         TimeBeanList timeBeanList = new TimeBeanList();
         timeBeanList.setDataList(Lists.newArrayList(timeBean, anotherBean));
@@ -45,9 +45,7 @@ public class JsonServiceImpl implements JsonService {
         }
         List<TimeBean> dataList = timeBeanList.getDataList();
         if (dataList != null) {
-            dataList.forEach(timeBean -> {
-                timeBean.setDate(LocalDate.now());
-            });
+            dataList.forEach(timeBean -> timeBean.setDate(LocalDate.now()));
         }
         return timeBeanList;
     }

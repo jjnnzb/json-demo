@@ -1,6 +1,5 @@
 package com.github.jjnnzb.jsondemo.entity;
 
-import com.alibaba.fastjson.annotation.JSONField;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -20,10 +19,10 @@ import java.time.LocalTime;
 public class TimeBean {
 
     @JsonFormat(pattern = "yyyy-MM-dd")
-//    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate date;
 
     @JsonFormat(pattern = "HH:mm:ss")
-//    @DateTimeFormat(pattern = "HH:mm:ss")
-    private LocalTime localTime;
+    @DateTimeFormat(pattern = "HH:mm:ss")
+    private LocalTime time;
 }
