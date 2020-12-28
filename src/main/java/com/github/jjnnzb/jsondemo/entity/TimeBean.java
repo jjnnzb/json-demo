@@ -1,6 +1,7 @@
 package com.github.jjnnzb.jsondemo.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import io.swagger.annotations.ApiModel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -16,6 +17,7 @@ import java.time.LocalTime;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@ApiModel(value = "Time demo bean")
 public class TimeBean {
 
     @JsonFormat(pattern = "yyyy-MM-dd")
