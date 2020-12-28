@@ -1,1 +1,1 @@
-# SpringBoot json-demo.
+# SpringBoot json demo.
